@@ -72,7 +72,37 @@ string parsing, (dynamic) algorithm,  regular expression, built-in functions, Nu
 
     <__main__.MyGame at 0x53540a0>
     ```
+## Sudoku Solver
+Sudoku is a 2-D array. A valid solution of Sudoku must has unique numbers in each row, column and 3x3 boxes.
+Use backtracking to try different combinations (in-place modify) until reach the answer. (leetcode problem)
+* preview
+  * input:
+    ```
+    [["5","3",".",".","7",".",".",".","."],
+    ["6",".",".","1","9","5",".",".","."],
+    [".","9","8",".",".",".",".","6","."],
+    ["8",".",".",".","6",".",".",".","3"],
+    ["4",".",".","8",".","3",".",".","1"],
+    ["7",".",".",".","2",".",".",".","6"],
+    [".","6",".",".",".",".","2","8","."],
+    [".",".",".","4","1","9",".",".","5"],
+    [".",".",".",".","8",".",".","7","9"]]
+    ```
+  * Output:
+    ```
+    [["5","3","4","6","7","8","9","1","2"],
+    ["6","7","2","1","9","5","3","4","8"],
+    ["1","9","8","3","4","2","5","6","7"],
+    ["8","5","9","7","6","1","4","2","3"],
+    ["4","2","6","8","5","3","7","9","1"],
+    ["7","1","3","9","2","4","8","5","6"],
+    ["9","6","1","5","3","7","2","8","4"],
+    ["2","8","7","4","1","9","6","3","5"],
+    ["3","4","5","2","8","6","1","7","9"]]
+    ```
+
 ## Design a singly linked list
 Linked list is the most common data structure and is widely used in queue, stacks, hash table ... etc.
 But how it works is not straightforward enough to a lot of beginners.
-Therefore I write a guideline to explain and use a list to show how it would look like at each stage of operation.
+Therefore I write a guide to explain and use a list to show how it would look like at each stage of operation.
+(leetcode problem)
