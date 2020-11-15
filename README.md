@@ -2,7 +2,7 @@
 including several projects using data types,  
 string parsing, (dynamic) algorithm,  regular expression, built-in functions, Numpy module.., etc.
 
-  ## MyOOXX game (Tic-tac-toe Game)
+  ## Tic-tac-toe Game
   * Description:
     An interactive game that the player can challenge the computer with 3 levels: easy, mid and master,
     also available to choose who plays first and end the game at any time.
