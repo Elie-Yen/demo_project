@@ -158,7 +158,7 @@ class MyGame:
     def ComputerPlay(self):
         self.order.append(3)
         empty, line = [], []
-        #_ test if anyone's about to line up in next turn
+        #_ test if anyone's about to put 3 marks in a row in next turn
         for r in range(3):
             for c in range(3):
                 if self.board[r, c] == 1:
@@ -174,11 +174,11 @@ class MyGame:
                         return self.Put(r, c)
                     if 4 in tmp:
                         #_ not return instantly
-                        #_ bc computer might line up later
+                        #_ bc computer might does later
                         line.append((r, c))
                     empty.append((i))
         
-        #_ computer does't line up; but player does
+        #_ computer is not; but player is
         if line:
             r, c = rd.choice(line)
             return self.Put(r, c)
