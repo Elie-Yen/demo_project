@@ -2,6 +2,8 @@
 including several projects using data types,  
 string parsing, (dynamic) algorithm,  regular expression, built-in functions, Numpy module.., etc.
 
+---
+
   ## Tic-tac-toe Game
   * Description:
     An interactive game that the player can challenge the computer with 3 levels: easy, mid and master,
@@ -12,9 +14,10 @@ string parsing, (dynamic) algorithm,  regular expression, built-in functions, Nu
   * Concept:
     By setting player = 2, computer = 3 and empty = 1, it could be very useful to check if someone is about to get 3 in a row
     and decide where to put.
-  * Modules used:
+  * libs:
     Numpy (3rd-party):  Speed up and calculate complex algorithm.
     Random (Built-in):  Increase unpredictable moves in easy level and some of mid & master level.
+    time (Built-in): Produce asynchronous outputs for better experience.
   * Preview:
       * start play
      ```
@@ -72,6 +75,8 @@ string parsing, (dynamic) algorithm,  regular expression, built-in functions, Nu
 
     <__main__.MyGame at 0x53540a0>
     ```
+---
+
 ## Sudoku Solver
 Sudoku is a 2-D array. A valid solution of Sudoku must has unique numbers in each row, column and 3x3 boxes.
 Use backtracking to try different combinations (in-place modify) until reach the answer. (leetcode problem)
@@ -100,8 +105,9 @@ Use backtracking to try different combinations (in-place modify) until reach the
     ["2","8","7","4","1","9","6","3","5"],
     ["3","4","5","2","8","6","1","7","9"]]
     ```
+---
 
-## Design a singly linked list
+## Design a singly linked list[tutorial]
 Linked list is the most common data structure and is widely used in queue, stacks, hash table ... etc.
 But how it works is not straightforward enough to a lot of beginners.
 Therefore I write a guide to explain and use a list to show how it would look like at each stage of operation.
