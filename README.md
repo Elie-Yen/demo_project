@@ -1,6 +1,4 @@
 # demo_project_Python
-including several projects using data types,  
-string parsing, (dynamic) algorithm,  regular expression, built-in functions, Numpy module.., etc.
 
 ---
 
