@@ -3,6 +3,7 @@ demo_project_Python/Tic-tac-toe game
 Author: Elie-Yen
 Python version: 3.6
 '''
+import time
 import numpy as np
 import random as rd
 class MyGame:
@@ -11,39 +12,33 @@ class MyGame:
         self.level = 0
         self.order = [] #_ who's play now
         self.board = np.ones((3,3))
+        self.show_board = np.full((3,3), '_') #_ to show the board
         self.symbol = {2: 'X', 3: 'O'} # 2: user; 3: computer
         self.rec = {'row': [1, 1, 1], 'col': [1, 1, 1], 'dg': [1, 1]}
         self.cnt = {8: 0, 27: 0, 'draw': 0 }
-        self.welcome = ('\nWelcome! Please choose game level' +
-                        '\n(type : [ end ] to end at anytime)' +
-                        '\ntype : [ easy / mid / master ]\n')
-        self.order_ask = ('\nYou choose [ {0} ] level' +
-                         '\nWould you wanna start first?\ntype : [ y / n ]\n')
+        self.welcome = '''\nWelcome! Please choose game level
+                        \n(type : [ end ] to end at anytime)
+                        \ntype : [ easy / mid / master ]\n'''
+        self.order_ask = '''\nYou choose [ {0} ] level
+                         \nWould you wanna start first?\ntype : [ y / n ]\n'''
         self.order_re = "\nTHX, you're a nice guy! I'll start first!\n\n"
-        self.pos_ask = ('\nWhere do you wanna put X?' +
-                        '\n(valid number range: 0,1,2 ex: 2, 2 )' +
-                        '\ntype : [ row, column ]')
-        self.pos_re = {8: ('\nYou put X at ({0}, {1}),\n\n {2}' +
-                            "\n\nnow it's my turn!\n"), 
-                       27: ("I'm done! I put O at ({0}, {1}),\n\n {2}" +
-                            '\n\n' + self.pos_ask)}
-        self.error_msg =  ('\nSorry, invalid input: " {0} " ' +
-                        'please type again!\ntype : [ {1} ]')
-        self.error_pos = ('\nSorry, ({0}, {1}) is occupied!\n' +
-                        'please type again!\ntype : [ row, column ]\n')
-        self.gameover = 'Play again?\ntype : [ play / end ]\n'
-        self.win_msg = {8: ('\nYou put X at ({0}, {1}),\n' +
-                            '\n ====Congrats! you won====\n\n{2}' +
-                            '\n' + '=' * 25 + '\n' + self.gameover),
-                        27: ("I'm done! I put O at ({0}, {1}),\n" +
-                            '\n =======Good  Game!=======\n\n{2}' +
-                            '\n' + '=' * 25 + '\n' + self.gameover),
-                        (8, 'draw'): ('\nYou put X at ({0}, {1}),\n' + 
-                            '\n =========A draw!=========\n\n{2}' +
-                            '\n' + '=' * 25 + '\n' + self.gameover),
-                        (27, 'draw'): ("I'm done! I put O at ({0}, {1}),\n" + 
-                            '\n =========A draw!=========\n\n{2}' +
-                            '\n' + '=' * 25 + '\n'+ self.gameover)}
+        self.pos_ask = '''\nWhere do you wanna put X?
+                        \n(valid number range: 0,1,2 ex: 2, 2 )
+                        \ntype : [ row, column ]'''
+        self.pos_c_turn = "\nnow it's my turn!\n"
+        self.pos_put = {8: "\nYou put X at ({0}, {1}),\n\n{2}\n",
+                       27: "\nI'm done! I put O at ({0}, {1}),\n\n{2}\n"}
+        self.error_msg =  '''\nSorry, invalid input: " {0} " please type again!
+                            \ntype : [ {1} ]'''
+        self.error_pos = '''\nSorry, ({0}, {1}) is occupied!\n'
+                        please type again!\ntype : [ row, column ]\n'''
+        self.gameover = '\nPlay again?\ntype : [ play / end ]\n'
+        self.win_msg = {8: ('n ====Congrats! you won====\n\n{0}\n' +
+                            '=' * 25 + '\n' + self.gameover),
+                        27: ('\n =======Good  Game!=======\n\n{0}\n' +
+                            '=' * 25 + '\n' + self.gameover),
+                        'draw': ('\n =========A draw!=========\n\n{0}\n' +
+                            '=' * 25 + '\n' + self.gameover)}
         self.end_fuc = ('\n' + '=' * 25 + '\n' +
                          ' End the game\n THX for playing MyGame!!!' +
                          '\n' + '=' * 25 + '\n')
@@ -82,6 +77,7 @@ class MyGame:
                 self.order.append(2)
             elif msg == 'n':
                 print(self.order_re)
+                time.sleep(2)
                 print(self.ComputerPlay())
             else:
                 print(self.error_msg.format(msg, 'y / n'))
@@ -104,6 +100,7 @@ class MyGame:
             #_ play again
             if msg == 'play':
                 self.board = np.ones((3, 3))
+                self.show_board = np.full((3,3), '_')
                 self.rec = {'row': [1, 1, 1], 'col': [1, 1, 1], 'dg': [1, 1]}
                 self.order.clear()
                 print(self.welcome)
@@ -116,6 +113,7 @@ class MyGame:
     def Put(self, row, col):
         val = self.order[-1]
         self.board[row, col] = val
+        self.show_board[row, col] = self.symbol[val]
         self.rec['row'][row] *= val
         self.rec['col'][col] *= val
 
@@ -128,37 +126,39 @@ class MyGame:
         return self.Winner(row, col)
     
     def Winner(self, row, col, res = ''):
-        #_ for output board beautifully
-        show = np.full((3,3), '_')
-        for r in range(3):
-            for c in range(3):
-                if self.board[r, c] > 1:
-                    show[r][c] = self.symbol[self.board[r, c]]
-        
         cur = self.order[-1] ** 3
         tmp = [self.rec['row'][row], self.rec['col'][col]]
+        print(self.pos_put[cur].format(row, col, self.show_board)) 
+        time.sleep(2)
         
         #_ a draw!
         if 1 not in self.board:
             self.cnt['draw'] += 1
             self.order.append('end')
-            print(self.win_msg[(cur, 'draw')].format(row, col, show))
+            print(self.win_msg['draw'].format(self.show_board))
         #_ someone win!
         elif cur in tmp or cur in self.rec['dg']:
             self.cnt[cur] += 1
             self.order.append('end')
-            print(self.win_msg[cur].format(row, col, show))
+            print(self.win_msg[cur].format(self.show_board))
         #_ keep playing
         else:
-            print(self.pos_re[cur].format(row, col, show))
+            #_ player's turn is over, computer's turn! 
             if cur == 8:
-                print(self.ComputerPlay()) #_ after respond, computer play
+                print(self.pos_c_turn)
+                time.sleep(2)
+                print(self.ComputerPlay())
+            
+            #_ computer's turn is over, player's turn!
+            else:
+                print(self.pos_ask)
+
         return ' '
 
     def ComputerPlay(self):
         self.order.append(3)
         empty, line = [], []
-        #_ test if anyone's about to put 3 marks in a row in next turn
+        #_ test if anyone's about to line up in next turn
         for r in range(3):
             for c in range(3):
                 if self.board[r, c] == 1:
@@ -174,11 +174,11 @@ class MyGame:
                         return self.Put(r, c)
                     if 4 in tmp:
                         #_ not return instantly
-                        #_ bc computer might does later
+                        #_ bc computer might line up later
                         line.append((r, c))
                     empty.append((i))
         
-        #_ computer is not; but player is
+        #_ computer does't line up; but player does
         if line:
             r, c = rd.choice(line)
             return self.Put(r, c)
