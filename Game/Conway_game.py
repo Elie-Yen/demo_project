@@ -1,5 +1,6 @@
 '''
 Elie Yen
+Python version: 3.6
 Conway's Game of life
 '''
 import numpy
@@ -71,7 +72,7 @@ def get_generation(cells, generations):
 
 
 
-
-cells = numpy.random.randint(2, size=(3, 3))
-get_generation(cells, 2)
+#_ for test the program
+cells = numpy.random.randint(2, size=(20, 6))
+get_generation(cells, 20)
 
