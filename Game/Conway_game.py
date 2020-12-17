@@ -18,10 +18,11 @@ def get_generation(cells, generations):
                 for c in range(len(cells[0])) for r in range(len(cells)))
     print(cells)
     for _ in range(generations):
-
+        h, w = len(cells), len(cells[0])
+        
         #_ calculate how many adj live cells
-        for row in range(len(cells)):
-            for col in range(len(cells[0])):
+        for row in range(h):
+            for col in range(w):
                 if not cells[row][col]:
                     continue
                 for r, c in adj:
@@ -29,11 +30,11 @@ def get_generation(cells, generations):
                         adj_live[(row + r, col + c)] *= 2
                         #_ live/ dead cells that has 3+ live neighbors will die
                         if adj_live[(row + r, col + c)] in (16, -16):
-                            adj_live[(row + r, col + c)] = 0
+                            del adj_live[(row + r, col + c)]
                         
                     #_ live cell is on boarder, consider expand bc
                     #_ the original dead cell might become alive
-                    else:
+                    elif row + r in (-1, h) or col + c in (-1, w):
                         adj_live[(row + r, col + c)] = -2
         
         #_ check the status of next generation
