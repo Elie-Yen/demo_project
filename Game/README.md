@@ -109,13 +109,15 @@ Use backtracking to try different combinations (in-place modify) until reach the
 
   ### Conway's Game of life
   * Description:  
-    Quote from [Wiki](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):  
-    The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.
+    Quote:  [Wiki](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):  
+    *The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.*
     
-    This program is design to calculate the state after few generations by giving the primary state.
+    This program is design to calculate the state after few generations by giving the primary state. Consider the *infinite space*, instead of showing fixed scope that contains empty rows/ cols or not includes all live cells, the program is able to show all live cells in the minimum scope.
     
   * Concept:  
-    Use dictionary
+    Use dictionary *adj_cell* to store the amount of live cell neighbors. Unlike 2-D array(list in python), dictionary is more flexible to add new position if the program found new live cell outside the current scope (which is dead now, but will become alive if it has 3 live cell neighbors.) and delete a cell that we already know it won't be live in next generation.
+    Inorder to identify the current state of a cell, the initional value of *adj_cell* is 1 for live cells, -1 for dead ones. If a live cell is found, the *adj_cell* value of its neighbors would be multified by 2. Thus, we will know whether the cell will live in next generation by checking whether its value is in (4, 8, -8). (live if a live cell has 2/3 live neighbors or a dead cell has 3 live neighbors)
+    
   * libs:   
-    Numpy (3rd-party):  For generating  the primary state to test.
+    Numpy (3rd-party):  For generating the primary state to test.
   * Preview:
