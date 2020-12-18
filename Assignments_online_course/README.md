@@ -34,7 +34,7 @@ Transform the time into 24-hour clock format in order to compute the overflow (b
 A *Category* class which is able to instantiate objects based on different budget categories with *ledger* instance. This class supports multiple methods: *deposit, withdraw, get_balance, transfer, check_funds*. Besides budget object is required to have specific format when being print.
 Another function called *create_spend_chart* that takes a list of categories as an argument. It should return a string that is a bar chart.
 * Concepts:
-Use list to store the info of each transaction (a dictionary of amount: description). Override __repr__ to meet the format requirement. Use list to arrange the names of categories vertically. 
+Use list to store the info of each transaction (a dictionary of amount: description). Override ```__repr__``` to meet the format requirement. Use list to arrange the names of categories vertically. 
 * Preview:
 ```
 >> food = budget.Category("Food")
