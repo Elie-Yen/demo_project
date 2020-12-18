@@ -24,12 +24,18 @@ Welcome! Here are some game-related projects written by Python and use some libs
       Welcome! Please choose game level
       (type : [ end ] to end at anytime)
       type : [ easy / mid / master ]
-       master # user's answer
-
+      
+      >> no
+      
+      Sorry, invalid input: " no " please type again!
+      type : [ easy / mid / master ]
+       
+      >> master
+       
       You choose [ master ] level
       Would you wanna start first?
       type : [ y / n ]
-       n
+      >> n
 
       THX, you're a nice guy! I'll start first!
       I'm done! I put O at (2, 2),
@@ -38,17 +44,6 @@ Welcome! Here are some game-related projects written by Python and use some libs
        ['_' '_' '_']
        ['_' '_' 'O']]
     ```
-    
-    * error message
-    ```
-    Welcome! Please choose game level
-    (type : [ end ] to end at anytime)
-    type : [ easy / mid / master ]
-     no
-    Sorry, invalid input: " no " please type again!
-    type : [ easy / mid / master ]
-    ```
-    
     * end of the game
     ```
     I'm done! I put O at (1, 0),
@@ -109,7 +104,7 @@ Use backtracking to try different combinations (in-place modify) until reach the
 
   ### Conway's Game of life
   * Description:  
-    Quote:  [Wiki](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):  
+    [Wiki](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life):  
     *The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.*
     
     This program is design to calculate the state after few generations by giving the primary state. Consider the *infinite space*, instead of showing fixed scope that contains empty rows/ cols or not includes all live cells, the program is able to show all live cells in the minimum scope.
@@ -121,3 +116,33 @@ Use backtracking to try different combinations (in-place modify) until reach the
   * libs:   
     Numpy (3rd-party):  For generating the primary state to test.
   * Preview:
+    ```
+      >> cells = numpy.random.randint(2, size=(5, 10))
+      >> get_generation(cells, 3)
+      
+      [[1 0 0 0 0 0 1 1 0 1]
+       [0 0 1 1 0 0 0 1 0 0]
+       [1 1 1 0 1 1 1 1 0 1]
+       [0 1 1 0 0 1 0 0 0 1]
+       [0 1 1 0 1 0 1 0 0 1]] (primary state)
+
+      [[0 0 0 0 0 0 1 1 1 0 0]
+       [1 0 1 1 1 0 0 0 0 0 0]
+       [1 0 0 0 1 1 0 1 0 0 0]
+       [0 0 0 0 0 0 0 1 0 1 1]
+       [0 1 1 1 0 1 0 0 0 0 0]]
+
+      [[0 0 0 0 0 0 1 0]
+       [0 0 1 0 0 0 1 0]
+       [1 0 1 1 0 0 0 1]
+       [1 0 0 1 1 1 0 1]
+       [1 1 1 0 1 0 0 1]
+       [0 1 0 0 0 0 0 0]
+       [0 1 0 0 0 0 0 0]]
+
+      [[0 0 1 1 1 0 0 1 1 0]
+       [0 0 0 1 0 0 1 0 1 0]
+       [1 1 0 0 0 0 1 0 1 1]
+       [0 1 0 1 0 1 1 1 0 0]]
+    
+      ```
