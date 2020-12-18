@@ -10,7 +10,7 @@ These projects includes:
 * Tutorial:
   * Design single linked list by Python
 
-* Assignments of FreeCodeAcademy: 
+* Assignments of online courses: 
   * arithmetic formatter
   * time calculator (without using built-in *date* ) 
   * budget app
