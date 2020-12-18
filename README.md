@@ -1,9 +1,21 @@
-# demo_project_Python
+## Hello! Welcome to my demo projects :) 
+Most of the projects here are written in Python 3.
 
+These projects includes:
+* Game: 
+  * tic-tac game
+  * Sudoku (solver)
+  * Conway's game of life
 
+* Tutorial:
+  * Design single linked list by Python
 
-## Design a singly linked list[tutorial]
-Linked list is the most common data structure and is widely used in queue, stacks, hash table ... etc.
-But how it works is not straightforward enough to a lot of beginners.
-Therefore I write a guide to explain and use a list to show how it would look like at each stage of operation.
-(leetcode problem)
+* Assignments of FreeCodeAcademy: 
+  * arithmetic formatter
+  * time calculator (without using built-in *date* ) 
+  * budget app
+  * polygon area calculator
+  * probability calculator
+
+* Other: 
+  * password generator
