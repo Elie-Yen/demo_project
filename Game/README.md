@@ -110,39 +110,24 @@ Use backtracking to try different combinations (in-place modify) until reach the
     This program is design to calculate the state after few generations by giving the primary state. Consider the *infinite space*, instead of showing fixed scope that contains empty rows/ cols or not includes all live cells, the program is able to show all live cells in the minimum scope.
     
   * Concept:  
-    Use dictionary *adj_cell* to store the amount of live cell neighbors. Unlike 2-D array(list in python), dictionary is more flexible to add new position if the program found new live cell outside the current scope (which is dead now, but will become alive if it has 3 live cell neighbors.) and delete a cell that we already know it won't be live in next generation.
-    Inorder to identify the current state of a cell, the initional value of *adj_cell* is 1 for live cells, -1 for dead ones. If a live cell is found, the *adj_cell* value of its neighbors would be multified by 2. Thus, we will know whether the cell will live in next generation by checking whether its value is in (4, 8, -8). (live if a live cell has 2/3 live neighbors or a dead cell has 3 live neighbors)
+    Unlike 2-D array made of built-in list, numpy array is more flexible to be reshaped or copied. Furthermore, setting dtype = int8 could even achieve a better memory optimization.
+    Inorder to identify the current state of a cell, the initional value of *next_cells* is 1 for live cells, -1 for dead ones. If a live cell is found, the *next_cells* value of its neighbors would be multified by 2. Thus, we will know whether the cell will live in next generation by checking whether its value is in (4, 8, -8). (live if a live cell has 2/3 live neighbors or a dead cell has 3 live neighbors)
     
   * libs:   
-    Numpy (3rd-party):  For generating the primary state to test.
+    Numpy (3rd-party): To speed up some operations. Also for generating the primary state to test the program.
   * Preview:
     ```
-      >> cells = numpy.random.randint(2, size=(5, 10))
-      >> get_generation(cells, 3)
+      >> cells = numpy.random.randint(2, size=(3, 5))
+      >> get_generation(cells, 5)
       
-      [[1 0 0 0 0 0 1 1 0 1]
-       [0 0 1 1 0 0 0 1 0 0]
-       [1 1 1 0 1 1 1 1 0 1]
-       [0 1 1 0 0 1 0 0 0 1]
-       [0 1 1 0 1 0 1 0 0 1]] (primary state)
+      generation0      generation1      generation2
+       [[1 1 1 0 1]     [[0 1 0 0]]      [[1 1 0 0]
+       [0 1 0 1 0]       [1 1 1 1]        [1 1 0 1]
+       [0 1 1 0 0]]      [0 0 0 1]        [1 0 0 1]
+                         [0 1 1 0]]       [0 0 1 0]]
 
-      [[0 0 0 0 0 0 1 1 1 0 0]
-       [1 0 1 1 1 0 0 0 0 0 0]
-       [1 0 0 0 1 1 0 1 0 0 0]
-       [0 0 0 0 0 0 0 1 0 1 1]
-       [0 1 1 1 0 1 0 0 0 0 0]]
-
-      [[0 0 0 0 0 0 1 0]
-       [0 0 1 0 0 0 1 0]
-       [1 0 1 1 0 0 0 1]
-       [1 0 0 1 1 1 0 1]
-       [1 1 1 0 1 0 0 1]
-       [0 1 0 0 0 0 0 0]
-       [0 1 0 0 0 0 0 0]]
-
-      [[0 0 1 1 1 0 0 1 1 0]
-       [0 0 0 1 0 0 1 0 1 0]
-       [1 1 0 0 0 0 1 0 1 1]
-       [0 1 0 1 0 1 1 1 0 0]]
-    
+      generation3      generation4      generation5
+       [[0 1 1 1 0]     [[0 0 1 0]       [[1 1 0]
+       [1 0 0 0 0]       [0 1 1 0]        [1 1 1]
+       [0 1 0 0 1]]      [1 0 0 1]]       [1 1 0]]    
       ```
