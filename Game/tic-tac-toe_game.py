@@ -1,5 +1,5 @@
 '''
-demo_project_Python/Tic-tac-toe game
+Tic-tac-toe game
 Author: Elie-Yen
 Python version: 3.6
 '''
