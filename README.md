@@ -1,21 +1,24 @@
 ## Hello! Welcome to my demo projects :) 
-Most of the projects here are written in Python 3.
+The projects are written in Python 3 (mainly) and C#.
+Visit [my github website](https://elie-yen.github.io/) to see an overview of all projects.
+For detail introduce and resource code, please clip into each file-path above.
 
-These projects includes:
+---
+
+### Catalog
 * Game: 
   * tic-tac game
   * Sudoku (solver)
   * Conway's game of life
 
 * Tutorial:
-  * Design single linked list by Python
+  * Design single linked list by Python (jupyter note)
 
-* Assignments of online courses: 
+* Math and other: 
   * arithmetic formatter
   * time calculator (without using built-in *date* ) 
   * budget app
-  * polygon area calculator
   * probability calculator
-
-* Other: 
+  * area calculator (C#)
   * password generator
+  * christmas tree builder
