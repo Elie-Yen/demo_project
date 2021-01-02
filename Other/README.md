@@ -1,6 +1,6 @@
 ## Other
 
-This block includes projects used different techs eg. string formatting, dynamic programming to produce the result.
+This category includes projects used different techs eg. string formatting, dynamic programming to produce the result.
 Some of projects here are assignments of online courses with specific requirement.
 
 ---
@@ -81,7 +81,7 @@ Percentage spent by category
 ### password generator
 
 * Purpose:   
-In order to fit different  requirements of websites, this program is designed to produce a password that has a customized length(6 - 16) and made by lowercases, digits and at least one required type of character(uppercases and symbols).  
+In order to meet complexity requirements of different websites, this program is designed to produce a password that has a customized length(6 - 16) and made by lowercases, digits and specific number of required character set(uppercases and non-alphanumeric characters).  
 
 * Concepts:  
 
