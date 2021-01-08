@@ -12,13 +12,15 @@ For detail introduce and resource code, please clip into each file-path above.
   * Conway's game of life
 
 * Tutorial:
-  * Design single linked list by Python (jupyter note)
+  * design single linked list by Python (jupyter note)
 
-* Math and other: 
-  * arithmetic formatter
-  * time calculator (without using built-in *date* ) 
-  * budget app
+* Math: 
   * probability calculator
-  * area calculator (C#)
-  * password generator
+  * shape builder (calculator) (C#)
+  * password generator (C#)
+
+* Other: 
   * christmas tree builder
+  * time calculator (without using built-in *date* )
+  * arithmetic formatter 
+  * budget app
