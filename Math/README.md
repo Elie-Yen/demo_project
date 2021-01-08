@@ -12,7 +12,8 @@ You can also set a number of permutation time to make it more difficult to repro
 
 * Concepts:  
 Consider the security of password, this program adopted *System.Security.Cryptography.RandomNumberGenerator* class - which is an abstract class of cryptographic random number generators (rather than *Random class*, which produces a sequence of numbers that meet certain statistical requirements for randomness). (cite from .NET API Reference version 5.0)
-By using factoradic representation, this program takes nearly a liner time to generate kth permutation by lexicographical order(regard the original one, not the sorted one; doesn't consider repetition).
+
+By using factoradic representation, this program takes nearly a liner time to generate kth permutation in lexicographical order (regard to the original one; doesn't consider repetition).
 
 * Preview:  
 ```
