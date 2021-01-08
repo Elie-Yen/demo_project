@@ -74,28 +74,3 @@ Percentage spent by category
         g    
 ```
 
----
-### polygon area calculator
----
-### probability calculator
-
-* Purpose:
-A program to determine the approximate probability of drawing certain balls randomly from a hat.
-*Hat* calss takes a variable number of arguments that specify the number of balls of each color that are in the hat; and has a *draw* method which  picks specific number of balls at random and returns those balls as a list of strings.
-Another *experiment* function return a probability of making correct predictions of picked balls during specific number of experiments.
-
-* Concepts:
-Import *random* module to pick balls randomly.
-Use *collection.Counter* to speed up the process of getting the result of every *draw*.
-* Preview:
-```
->> hat = prob_calculator.Hat(red=3,blue=2)
->> hat.contents
-["red","red","red","blue","blue"]
-
->> hat = prob_calculator.Hat(blue=3,red=2,green=6)
->> probability = prob_calculator.experiment(hat=hat, expected_balls={"blue":2,"green":1}, num_balls_drawn=4, num_experiments=1000)
->> probability
-0.272
-```
----
