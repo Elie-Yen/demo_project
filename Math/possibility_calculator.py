@@ -1,3 +1,7 @@
+"""
+Elie Yen
+Python 3
+"""
 import random
 from collections import Counter
 
