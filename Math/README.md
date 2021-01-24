@@ -4,6 +4,23 @@ This category includes projects that written with some math concepts or could be
 
 ---
 
+### shape calculator(C#)
+
+* Purpose:   
+Support build common shapes : quadrilateral, parallelogram, rhombus, kite, square, rectangle, triangle, circle, regular polygon and set by coordinates.
+With required and correct arguments, this program could calculate unknown area, perimeter and other infos for other purpose.
+The *LeastCompleteShapetoFill* method could calculates the least number of certain shapes to fill an area considering the direction.
+
+
+* Concepts:   
+Use dictionary to record different restriction of arguments and properties for each shape.  A further validation by Euler's quadrilateral theorem will be implemented if it's a quadrilateral.
+The accessibility of properties, which's achieved by get/ set accessor,  blocks modification from user to ensure the correctness of result. The switch statements in each methods make the code more readable and eliminating the need to test another condition.
+
+* Preview:   
+![demo of shape calculaor](https://github.com/Elie-Yen/Elie-Yen.github.io/blob/main/demo_shapebuilder.png)
+
+---
+
 ### password generator(c#)
 
 * Purpose:   
