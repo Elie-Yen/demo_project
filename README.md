@@ -18,8 +18,10 @@ For detail introduce and resource code, please clip into each file-path above.
   * probability calculator
   * shape builder (calculator) (C#)
   * password generator (C#)
+  * hamming number generator (C#)
 
 * Other: 
+  * BST builder, serializer, deserializer (C#)
   * christmas tree builder
   * time calculator (without using built-in *date* )
   * arithmetic formatter 
