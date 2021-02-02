@@ -4,23 +4,6 @@ This category includes projects that written with some math concepts or could be
 
 ---
 
-### shape calculator(C#)
-
-* Purpose:   
-Support build common shapes : quadrilateral, parallelogram, rhombus, kite, square, rectangle, triangle, circle, regular polygon and set by coordinates.
-With required and correct arguments, this program could calculate unknown area, perimeter and other infos for other purpose.
-The *LeastCompleteShapetoFill* method could calculates the least number of certain shapes to fill an area considering the direction.
-
-
-* Concepts:   
-Use dictionary to record different restriction of arguments and properties for each shape.  A further validation by Euler's quadrilateral theorem will be implemented if it's a quadrilateral.
-The accessibility of properties, which's achieved by get/ set accessor,  blocks modification from user to ensure the correctness of result. The switch statements in each methods make the code more readable and eliminating the need to test another condition.
-
-* Preview:   
-![demo of shape calculaor](https://github.com/Elie-Yen/Elie-Yen.github.io/blob/main/demo_shapebuilder.png)
-
----
-
 ### password generator(c#)
 
 * Purpose:   
@@ -45,6 +28,41 @@ Console.WriteLine(res); // Ub➌6yH1a@I0f9'4➌K.;➌➌O✿*h
 res = ex.Permutation(res, 3628799); 
 Console.WriteLine(res); // Ub➌6yH1a@I0f9'4h*✿O➌➌➌;.K
 ```
+---
+
+### Hamming Number Generator
+
+* Purpose:   
+Regular numbers are the numbers whose only prime divisors are 2, 3, and 5, In computer science, regular numbers are often called Hamming numbers. (cite from wiki)
+A program contains functions of generate the kth hamming number (or list), validation of hamming number, and
+hamming number decomposition (n = 2^i * 3^j * 5^k)  (in a specific field that the hamming number < 2 ^ 31).
+
+* Concepts:  
+Use similar approach of Edsger Dijkstra to calculate all hamming number from (1 - k) in ascending order. Validation and decomposition are achieved by modulo operation with modulus: 2, 3, 5.
+
+* Preview:   
+```
+int ex = HammingNumber.GenerateKthNum(1500);
+Console.WriteLine(ex); // 859963392
+HammingNumber.Decompose(ex);
+// return int array: {17, 8, 5}
+// print: 859963392 = 2 ^ 17 * 3 ^ 8 * 5 ^ 0
+
+ex = HammingNumber.GenerateKthNum(13);
+Console.WriteLine(HammingNumber.Valid(ex * 10)); // true
+
+int[] first_hamming_50 = HammingNumber.GenerateKthList(50);
+foreach (int hm in first_hamming_50){
+     Console.WriteLine(hm);
+}
+/* -----------
+[1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 25, 27,
+30, 32, 36, 40, 45, 48, 50, 54, 60, 64, 72, 75, 80, 81, 90,
+96, 100, 108, 120, 125, 128, 135, 144, 150, 160, 162, 180,
+192, 200, 216, 225, 240, 243]
+-------*/
+```
+
 ---
 
 ### probability calculator
