@@ -1,4 +1,4 @@
-###possibility calculator
+### possibility calculator
 
 ![demo of hat (with seed) ](https://github.com/Elie-Yen/demo_project/blob/master/Math/possibility_calculator/demo_possibility_cal_hatwithseed_Figure_1.png)
 
@@ -16,10 +16,13 @@ The Dice mode, on the other hand, is independent - every dice has no impact on t
 * Libs: Numpy(random), Pandas,  Matplotlib(pyplot,  GridSpec, MultipleLocator)
 
 * Preview:   
-*example of hat*
+**example of hat**
 
-![demo of hat (with seed) ](https://github.com/Elie-Yen/demo_project/blob/master/Math/possibility_calculator/demo_possibility_cal_hatwithseed_Figure_1.png)
-![demo of hat (without seed) ](https://github.com/Elie-Yen/demo_project/blob/master/Math/possibility_calculator/demo_possibility_cal_hatnoseed_Figure_1.png)
+*with seed*   
+![demo of hat (with seed) ](demo_possibility_cal_hatwithseed_Figure_1.png)
+
+*without seed*   
+![demo of hat (without seed) ](demo_possibility_cal_hatnoseed_Figure_1.png)
 ```
 >> exp = Experiment() # experiment instance
 
@@ -33,8 +36,12 @@ The Dice mode, on the other hand, is independent - every dice has no impact on t
 >> exp.hat_experiment(self.hat_r, 12, 100, expect) # same condition, but no seed
 0.38
 ```
-*example of dice*
+**example of dice**
+
+*with seed*   
 ![demo of dice (with seed) ](demo_possibility_cal_dicewithseed_Figure_1.png)
+   
+*without seed*   
 ![demo of dice (without seed) ](demo_possibility_cal_dicenoseed_Figure_1.png)
 
 ```
