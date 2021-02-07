@@ -86,8 +86,8 @@ class Experiment:
 
     def hat_experiment(self, hat, num_balls_drawn, experiment_time, expected_balls):
         '''
-        calculate the possibility of successful prediction (occurence of color-ball)
-        return possibility(float) and print statistic charts of occurence of each color
+        calculate the possibility of successful prediction (occurrence of color-ball)
+        return possibility(float) and print statistic charts of occurrence of each color
 
         hat: A hat object containing balls that should be copied inside the function
         num_balls_drawn: integer, number of balls to draw out of the hat in each experiment.
@@ -127,15 +127,15 @@ class Experiment:
         loc = MultipleLocator(1)
 
         for c in data:
-            #_ freq = frequency of occurence happens
-            #_ freq.index = occurence of ball per draw
+            #_ freq = frequency of occurrence happens
+            #_ freq.index = occurrence of ball per draw
             freq = data[c].value_counts().sort_index()
             ax2.plot(freq.index, freq, color=cmap[c])
             
-        ax2.set_title('Compare of occurence')
+        ax2.set_title('Compare of occurrence')
         ax2.grid(True)
         ax2.xaxis.set_major_locator(loc)
-        ax2.set_xlabel('occurence in each draw')
+        ax2.set_xlabel('occurrence in each draw')
         ax2.set_ylabel('frequency')
 
         fig.tight_layout() #_ avoid label overlapping
@@ -148,7 +148,7 @@ class Experiment:
         '''
         Rolling num_dices dices at each time,
         return the possibility(float) of having exactly same sum of points as expected,
-        and print chart of occurence of specific point
+        and print chart of occurrence of specific point
         
         dice: Dice object;
         expected_sum/ roll_time / experiment_time: integer
@@ -190,18 +190,18 @@ class Experiment:
 
         #_ data
         df = pd.DataFrame(data, columns=points)
-        occurence = df.sum()
+        occurrence = df.sum()
 
-        ax1.pie(occurence, labels=occurence.index, autopct='%1.1f%%')
+        ax1.pie(occurrence, labels=occurrence.index, autopct='%1.1f%%')
         ax1.axis('equal')
-        ax1.set_title('total occurence ratio of each point')
+        ax1.set_title('total occurrence ratio of each point')
 
         ax2.scatter(x=points, y=df.mean())
         ax2.grid(True)
         ax2.xaxis.set_major_locator(loc)
         ax2.set_xlabel('points')
-        ax2.set_ylabel('occurence')
-        ax2.set_title('mean occurence of each point in each rolling')
+        ax2.set_ylabel('occurrence')
+        ax2.set_title('mean occurrence of each point in each rolling')
 
         ax3.hist(sum_points, bins=bins)
         ax3.grid(True)
