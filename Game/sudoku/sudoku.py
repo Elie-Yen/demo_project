@@ -1,7 +1,7 @@
 """
 Elie Yen
 Python 3
-Sudoku solver v2
+Sudoku creator, solver and validator v2
 """
 import numpy as np
 
