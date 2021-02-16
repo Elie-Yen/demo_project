@@ -120,7 +120,7 @@ class Experiment:
                 success += 1
 
         ax1.set_title('color composement')
-        ax1.set_xlabel('experience no.')
+        ax1.set_xlabel('experiment no.')
         ax1.set_ylabel('number')
 
         data = pd.DataFrame(data)
