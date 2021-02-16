@@ -34,7 +34,7 @@ The Dice mode, on the other hand, is independent - every dice has no impact on t
 >> exp.hat_experiment(self.hat, 12, 100, expect) # take 12 balls in each draw, 100 experiments
 0.56
 >> exp.hat_experiment(self.hat_r, 12, 100, expect) # same condition, but no seed
-0.38
+0.42
 ```
 **example of dice**
 
@@ -54,3 +54,6 @@ The Dice mode, on the other hand, is independent - every dice has no impact on t
 >> exp.dice_experiment(self.dice_r, 3, 100, 10) # without seed
 0.15
 ```
+*with seed compared to ideal distribution (data from another project: [sum_of_dice](https://github.com/Elie-Yen/demo_project/tree/master/Math/sum_of_dices))*
+![demo of dice (with seed compare) ](https://github.com/Elie-Yen/demo_project/blob/master/Math/possibility_calculator/demo_possibility_cal_dicewithseed_compared_Figure_1.png?raw=true)
+
