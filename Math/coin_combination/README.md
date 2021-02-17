@@ -1,4 +1,6 @@
 ### Coin Combination
+
+![demo coin combination](https://github.com/Elie-Yen/demo_project/blob/master/Math/coin_combination/demo_coin_combination.png?raw=true)
   
  * Purpose:   
   This program consists of 2 functions: WayofSum and BuyWithChange.
