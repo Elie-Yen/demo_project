@@ -1,3 +1,8 @@
+/*--
+Elie Yen
+C#
+Password generator
+--*/
 class Password {
     private int _length;
     private bool _uppercase;
