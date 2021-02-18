@@ -1,7 +1,7 @@
 /*------
 C#
 Elie yen
-hamming number generator
+hamming number generator and validator
 ------*/
 
 public class HammingNumber{
