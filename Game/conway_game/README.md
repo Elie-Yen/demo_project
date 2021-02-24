@@ -3,7 +3,7 @@
   ### Conway's Game of life  
 
 
-![demo of ConWay's game](https://github.com/Elie-Yen/demo_project/blob/master/Game/conway_game/demo_conway_game.gif?raw=true)
+![demo of ConWay's game](demo_conway_game.gif)
 
 The gif above shows how the program worked -it will only show scope of darker numbers in each generation.
 The lighter number in background is just to indicate the empty space it has trimmed. 
