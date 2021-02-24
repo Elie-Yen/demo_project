@@ -1,6 +1,6 @@
 ### Chrismas tree builder
 
-![demo christmas tree builder](https://github.com/Elie-Yen/demo_project/blob/master/Other/christmax_tree_builder/demo_christmas_tree_builder.png?raw=true)
+![demo christmas tree builder](demo_christmas_tree_builder.png)
 
 * Purpose:  
 This program could produce a html code that presents a customized christmas tree with random decorations on it. Just paste on note and save it into .html, or paste on anywhere on your html code. And you will see your beautiful christmas tree.
