@@ -11,7 +11,7 @@ Use dictionary to record different restriction of arguments and properties for e
 The accessibility of properties, which's achieved by get/ set accessor,  blocks modification from user to ensure the correctness of result. The switch statements in each methods make the code more readable and eliminating the need to test another condition.
 
 * Preview:   
-![demo of shape calculaor 1](https://github.com/Elie-Yen/demo_project/blob/master/Math/shape_calculator/demo_shapebuilder.png?raw=true)
+![demo of shape calculaor 1](https://github.com/Ellie-Yen/demo_project/blob/master/Math/shape_calculator/demo_shapebuilder.png?raw=true)
 
 ```
 >> var ex2 = RegularPolygon(6, 1); // hexagon
@@ -22,7 +22,7 @@ Total: 12, odd-row * 2, even-row * 1, odd-col * 4, even-col * 4
 12
 ```
 
-![demo of shape calculaor 2](https://github.com/Elie-Yen/demo_project/blob/master/Math/shape_calculator/demo_shape_calculator_2.png?raw=true)
+![demo of shape calculaor 2](https://github.com/Ellie-Yen/demo_project/blob/master/Math/shape_calculator/demo_shape_calculator_2.png?raw=true)
 
 ```
 >> var triangle = new Triangle(5, 6, 7);
