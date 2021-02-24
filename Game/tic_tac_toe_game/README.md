@@ -1,6 +1,6 @@
   ### Tic-tac-toe Game
   
-  ![demo of playing](https://github.com/Elie-Yen/demo_project/blob/master/Game/tic_tac_toe_game/demo_tic_tac_toe.gif?raw=true)
+  ![demo of playing](demo_tic_tac_toe.gif)
   
   * Description:
     An interactive game that the player can challenge the computer with 3 levels: easy, mid and master,
@@ -16,4 +16,4 @@
     Random (Built-in):  Increase unpredictable moves in easy level and some of mid & master level.   
     time (Built-in): Produce asynchronous outputs for better experience.   
   * Preview:
-     ![demo of process](https://github.com/Elie-Yen/demo_project/blob/master/Game/tic_tac_toe_game/demo_tic_tac_toe_process.png?raw=true)
+     ![demo of process](demo_tic_tac_toe_process.png)
