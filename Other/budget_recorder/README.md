@@ -9,5 +9,5 @@ Currently use list to record each transaction.(in future this will be replaced b
 The Pandas (and Numpy) lib is used for filter, drop and aggregate data, while Matplotlib for visualization.
 
 * Preview:  
-![demo_budget_recorder_Figure_1](https://github.com/Elie-Yen/demo_project/blob/master/Other/budget_recorder/Figure_1.png?raw=true)
-![demo_budget_recorder_Figure_2](https://github.com/Elie-Yen/demo_project/blob/master/Other/budget_recorder/Figure_2.png?raw=true)
+![demo_budget_recorder_Figure_1](Figure_1.png)
+![demo_budget_recorder_Figure_2](Figure_2.png)
