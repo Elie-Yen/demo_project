@@ -22,7 +22,7 @@ another example of build by an invalid string (with duplicates and false order)
 >> Console.WriteLine(ex2); 
 [9 | 5, 78 | 4, 6, 42, 99 | 1, null, null, null, null, null, null, null]
 ```
-![demo of BST builder](https://github.com/Elie-Yen/demo_project/blob/master/Other/bst_builder/demo_bst_1.png?raw=true)
+![demo of BST builder](demo_bst_1.png)
 
 ```
 >> ex2.Delete(11); // this would do nothing since 11 is not in root
@@ -37,4 +37,4 @@ false  // since 5 already in root
 >> Console.WriteLine(ex2.OrderVisualize("preorder"));
 preorder : [ 9, 5, 1, 6, 78, 42, 55, 99 ] , height: 4, non-null elements: 8
 ```
-![demo of BST builder operation](https://github.com/Elie-Yen/demo_project/blob/master/Other/bst_builder/demo_BST_ani.gif?raw=true)
+![demo of BST builder operation](demo_BST_ani.gif)
